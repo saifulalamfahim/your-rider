@@ -43,13 +43,9 @@ const SelectDest = () => {
                     {
                         fakePlace.map(place => (
                             <option value={place.name}>{place.name}</option>
-                            
                         ))
                     }
-                    
                 </select>
-                <br/>
-                <br/>
                 <input type="date" id="myDate" value="2014-02-09"></input>
                 <br /><br />
                 {
@@ -66,7 +62,7 @@ const SelectDest = () => {
             <div className="col-md-7">
                 <div>
                     <img className="img" src={map} alt="" />
-                    
+                   
                     
                 </div>
             </div>

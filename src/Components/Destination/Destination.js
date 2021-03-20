@@ -4,12 +4,12 @@ import './Destination.css';
 import fakedata from "../../FakeData/FakeData"
 import fakePlace from '../../FakePlace/FakePlace';
 
-
 const Destination = () => {
     const {veh, placeFrom, placeTo} = useParams();
-    const {type, info, imgUrl} = fakedata.find(vehicle => vehicle.type === veh);
+    const {info} = fakedata.find(vehicle => vehicle.type === veh);
     const {gMap} = fakePlace.find(place => place.name === placeFrom);
 
+    // console.log(place)
     return (
         <div className="row">
             <div className="col-md-4 card cardStyle">
@@ -27,6 +27,10 @@ const Destination = () => {
             <br/><br/>
 
             
+
+            {info.map(vehicleName => <ul><li>{vehicleName.driverName}</li></ul>)}
+            </div>
+            <div className="col-md-7">
 <div>
 <iframe src={gMap} width="400px" height="400px" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>

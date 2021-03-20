@@ -4,38 +4,38 @@ const rides = [
         type: 'Bike',
         info: [
             {
-                driverName: "Iftekhar Pathao 10",
+                driverName: "noyan",
                 space: "5",
                 price: '30'
             },
             {
-                driverName: "Iftekhar Pathao 11",
+                driverName: "a,ar",
                 space: "5",
                 price: '30'
             },
             {
-                driverName: "Iftekhar Pathao 12",
+                driverName: "shahed",
                 space: "5",
                 price: '30'
             }
         ]
     },
     {
-        imgUrl: 'https://image.shutterstock.com/image-vector/car-icon-vector-isolated-on-260nw-1024160263.jpg',
+        imgUrl: 'https://image.shutterstock.com/image-vector/car-vector-symbol-van-cars-260nw-1017677407.jpg',
         type: 'Car',
         info: [
             {
-                driverName: "Iftekhar Pathao 1",
+                driverName: "nitin",
                 space: "5",
                 price: '30'
             },
             {
-                driverName: "Iftekhar Pathao 2",
+                driverName: "kunjo",
                 space: "5",
                 price: '30'
             },
             {
-                driverName: "Iftekhar Pathao 3",
+                driverName: "kamls",
                 space: "5",
                 price: '30'
             }
@@ -46,17 +46,17 @@ const rides = [
         type: 'Bus',
         info: [
             {
-                driverName: "Iftekhar Pathao 4",
+                driverName: "shahrf",
                 space: "5",
                 price: '30'
             },
             {
-                driverName: "Iftekhar Pathao 5",
+                driverName: "hiron",
                 space: "5",
                 price: '30'
             },
             {
-                driverName: "Iftekhar Pathao 6",
+                driverName: "hasid",
                 space: "5",
                 price: '30'
             }
@@ -67,17 +67,17 @@ const rides = [
         type: 'Train',
         info: [
             {
-                driverName: "Iftekhar Pathao 7",
+                driverName: "Iftekhar",
                 space: "5",
                 price: '30'
             },
             {
-                driverName: "Iftekhar Pathao 8",
+                driverName: "Ift",
                 space: "5",
                 price: '30'
             },
             {
-                driverName: "Iftekhar Pathao 9",
+                driverName: "fahim",
                 space: "5",
                 price: '30'
             }
