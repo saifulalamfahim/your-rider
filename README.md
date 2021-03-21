@@ -2,4 +2,4 @@
 # repo
 https://github.com/Porgramming-Hero-web-course/react-auth-saifulalamfahim
 # live site
-https://your-rider.netlify.app/
+https://frosty-dubinsky-eb2589.netlify.app/
