@@ -1,19 +1,16 @@
 import React, { useContext } from 'react';
 import './Header.css';
-// import menu from './menu.png';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
-import * as firebase from 'firebase/app';
 import 'firebase/auth';
-import { handleSignOut, isLoggedIn, loggedInInfo } from '../Login/Manager';
+import { isLoggedIn, loggedInInfo } from '../Login/Manager';
 
 
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    // is logged in
+
     const isLogged = isLoggedIn();
 
-    // Handle sign out button
     const signOut = () => {
         setLoggedInUser({});
         sessionStorage.removeItem('token');

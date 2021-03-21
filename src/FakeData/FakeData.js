@@ -30,12 +30,12 @@ const rides = [
                 price: '30'
             },
             {
-                driverName: "kunjo",
+                driverName: "kumu apu",
                 space: "5",
                 price: '30'
             },
             {
-                driverName: "kamls",
+                driverName: "shadin vai",
                 space: "5",
                 price: '30'
             }
@@ -67,12 +67,12 @@ const rides = [
         type: 'Train',
         info: [
             {
-                driverName: "Iftekhar",
+                driverName: "kamla",
                 space: "5",
                 price: '30'
             },
             {
-                driverName: "Ift",
+                driverName: "rohima",
                 space: "5",
                 price: '30'
             },

@@ -11,10 +11,10 @@ const Data = (props) => {
         <div onClick={() => handleBook(type)} className="col-md-3">
             <div className="p-3">
             <div className="card cartVehicle">
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center bg-info">
                     <img src={imgUrl} className="" alt="" />
                 </div>
-                <div className="card-body text-dark text-center">
+                <div className="card-body text-dark text-center bg-info">
                     <p className="card-text text-center"><strong>{type}</strong></p>
                 </div>
             </div>

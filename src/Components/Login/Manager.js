@@ -8,7 +8,6 @@ export const initializeLoginFramework = () => {
   }
 }
 
-// Google Sign In Handler
 export const handleGoogleSignIn = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(googleProvider)
@@ -22,7 +21,6 @@ export const handleGoogleSignIn = () => {
     });
 };
 
-// Facebook Sign In handler
 export const handleFbSignIn = () => {
   const fbProvider = new firebase.auth.FacebookAuthProvider();
     return firebase.auth().signInWithPopup(fbProvider)
@@ -36,8 +34,6 @@ export const handleFbSignIn = () => {
     });
 };
 
-
-// Sign Out handler:
 export const handleSignOut = () => {
   return firebase.auth().signOut()
   .then(res => {
@@ -54,8 +50,6 @@ export const handleSignOut = () => {
   });
 }
 
-
-// reset password
 export const resetPassword = (email) => {
   let auth = firebase.auth();
   auth
@@ -65,8 +59,6 @@ export const resetPassword = (email) => {
       )
 };
 
-
-// Create user with email and password
 export const createUserWithEmailAndPassword = (name, email, password) => {
   return firebase.auth().createUserWithEmailAndPassword(email, password)
   .then( res => {
@@ -84,8 +76,6 @@ export const createUserWithEmailAndPassword = (name, email, password) => {
   });
 }
 
-
-// // sign in with email and password
 export const signInWithEmailAndPassword = (email, password) =>{
   return firebase.auth().signInWithEmailAndPassword(email, password)
   .then(res => {
@@ -102,8 +92,6 @@ export const signInWithEmailAndPassword = (email, password) =>{
   });
 }
 
-
-// Update user name
 const updateUserName = name =>{
   const user = firebase.auth().currentUser;
 
@@ -111,8 +99,6 @@ const updateUserName = name =>{
     displayName: name
   })
 };
-
-
 export const isLoggedIn = () => {
   const token = sessionStorage.getItem('token');
   if (!token) {

@@ -15,7 +15,6 @@ const Login = () => {
   // Firebase init
   initializeLoginFramework();
 
-  //User Account
   const [newUser, SetNewUSer] = useState(false);
   const [user, setUser] = useState({
     isSignedIn: false,
@@ -26,7 +25,6 @@ const Login = () => {
 
 const [error, setError] = useState("")
 
-  // Context from app.js
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
 
@@ -48,7 +46,7 @@ const [error, setError] = useState("")
   };
 
  
-// Coming from login Manager
+// Coming from Manager
   const handleResponse = (res, redirect) => { 
     if (res.error) {
       newUser && setError(res.error)
@@ -72,13 +70,9 @@ const storeAuthToken = () => {
       history.replace(from);
     })
     .catch(function (error) {
-      // Handle error
     });
 };
 
-
-
-  // Sign in/up with email address
   const handleBlur = (e) => {
     let isFieldValid = true;
     if (e.target.name === 'email') {
@@ -97,7 +91,6 @@ const storeAuthToken = () => {
       setUser(newUserInfo);
     }
   };
-
 
   const handleUserSubmit = () => {
     if(newUser && user.email && user.password){
@@ -169,7 +162,7 @@ const storeAuthToken = () => {
               )}
 
               <div className="form-group">
-                <button className="btn btn-dark" style={{ width: '100%' }} variant='warning'  type='submit' >Login</button>
+                <button className="btn btn-info" style={{ width: '100%' }} variant='warning'  type='submit' >Login</button>
               </div>
 
               <div className='form-group col' id='formForget' className='text-center mt-3'>
@@ -180,13 +173,15 @@ const storeAuthToken = () => {
 
               <p className='another'> or </p>
               <div className='social-login'>
-                <button className="btn btn-light" onClick={fbSignIn}>
-                  <img align="left" src={facebookIcon} alt='facebook icon' />{' '}
-                  <span>Continue with Facebook</span>
-                </button>
+        
                 <button className ="btn btn-light" onClick={googleSignIn}>
                   <img align="left" src={googleIcon} alt='google icon' />{' '}
                   <span>Continue with Google</span>
+                </button>
+
+                <button className="btn btn-light" onClick={fbSignIn}>
+                  <img align="left" src={facebookIcon} alt='facebook icon' />{' '}
+                  <span>Continue with Facebook</span>
                 </button>
 
               </div>

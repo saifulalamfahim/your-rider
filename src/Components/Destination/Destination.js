@@ -32,7 +32,7 @@ const Destination = () => {
             </div>
             <div className="col-md-7">
 <div>
-<iframe src={gMap} width="400px" height="400px" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+         {/* <iframe src={gMap} width="400px" height="400px" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> */}
             </div>
             </div>
 

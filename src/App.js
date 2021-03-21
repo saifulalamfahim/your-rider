@@ -25,7 +25,7 @@ function App() {
     <UserContext.Provider value ={[loggedInUser, setLoggedInUser]} >
     <Router>
       <Header></Header>
-      <div className="bg-info home">
+      <div className="home">
       <Switch>
         
         <div className="container">

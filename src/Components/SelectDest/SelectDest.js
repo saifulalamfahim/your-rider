@@ -6,8 +6,6 @@ const SelectDest = () => {
 
     const { veh } = useParams();
 
-    
-
     const [placeFrom, setPlaceFrom] = useState("");
     const [placeTo, setPlaceTo] = useState("");
 
@@ -15,15 +13,10 @@ const SelectDest = () => {
         const placeValue = e.target.value
         setPlaceFrom(placeValue)
     }
-    console.log(placeFrom)
     const handlePlaceTo = (e) => {
         const placeValue = e.target.value
         setPlaceTo(placeValue)
     }
-    console.log(placeTo)
-    // if(placeFrom == placeTo){
-    //     document.getElementById("placeMatch").innerHTML = "Please Select different places"
-    // }
     return (
         
         <div className="row">
@@ -36,6 +29,7 @@ const SelectDest = () => {
                             <option value={place.name}>{place.name}</option>
                         ))
                     }
+                    
                 </select>
                 <p className="mb-0 mt-3">Drop</p>
                 <select onChange={handlePlaceTo} value={placeTo} name="category" id="">
@@ -45,6 +39,7 @@ const SelectDest = () => {
                             <option value={place.name}>{place.name}</option>
                         ))
                     }
+                    
                 </select>
                 <input type="date" id="myDate" value="2014-02-09"></input>
                 <br /><br />
@@ -56,14 +51,18 @@ const SelectDest = () => {
                     (placeFrom != placeTo) && <Link to={`/destination/${veh}/${placeFrom}/${placeTo}`}><button className="text-center bg-danger mb-5">Search</button></Link>
                 }
                 
+                
             </div>
             
 
             <div className="col-md-7">
                 <div>
                     <img className="img" src={map} alt="" />
-                   
-                    
+                    {
+                        fakePlace.map(place => (
+                            <option value={place.gMap}>{place.gMap}</option>
+                        ))
+                    }
                 </div>
             </div>
         </div>
